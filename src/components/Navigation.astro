@@ -1,0 +1,85 @@
+<nav
+  class="hidden sm:block top-0 z-50 bg-dark shadow-[0_1px_8px_rgba(20,20,20,0.07)] w-full"
+>
+  <div
+    class="flex justify-center items-center gap-12 h-16 mx-auto max-md:gap-4 max-md:h-14"
+  >
+    <a
+      href=""
+      id="nav-about"
+      class="font-plex text-lg px-9 py-2.5 rounded-full bg-transparent text-primary transition-all duration-200 no-underline font-bold tracking-wide hover:bg-card-bg hover:text-primary focus:bg-card-bg focus:text-primary max-md:px-3.5 max-md:py-2"
+    >
+      About
+    </a>
+    <a
+      href="#experience"
+      id="nav-experience"
+      class="font-plex text-lg px-9 py-2.5 rounded-full bg-transparent text-primary transition-all duration-200 no-underline font-bold tracking-wide hover:bg-card-bg hover:text-primary focus:bg-card-bg focus:text-primary max-md:px-3.5 max-md:py-2"
+    >
+      Experience
+    </a>
+    <a
+      href="#projects"
+      id="nav-projects"
+      class="font-plex text-lg px-9 py-2.5 rounded-full bg-transparent text-primary transition-all duration-200 no-underline font-bold tracking-wide hover:bg-card-bg hover:text-primary focus:bg-card-bg focus:text-primary max-md:px-3.5 max-md:py-2"
+    >
+      Projects
+    </a>
+    <!-- TODO: I'll setup a separate repo to handle the blog, it would need to be a bit more useful -->
+    <!-- <a -->
+    <!--   href="" -->
+    <!--   id="nav-blog" -->
+    <!--   class="font-plex text-lg px-9 py-2.5 rounded-full bg-transparent text-primary transition-all duration-200 no-underline font-bold tracking-wide hover:bg-card-bg hover:text-primary focus:bg-card-bg focus:text-primary max-md:px-3.5 max-md:py-2" -->
+    <!-- > -->
+    <!--   Blog -->
+    <!-- </a> -->
+  </div>
+</nav>
+
+<script>
+  window.onload = function () {
+    function updateActive() {
+      const navLinks = [
+        document.getElementById("nav-about"),
+        document.getElementById("nav-experience"),
+        document.getElementById("nav-projects"),
+        document.getElementById("nav-blog"),
+      ].filter((el) => el !== null);
+
+      let found = false;
+      navLinks.forEach((el) => {
+        el.classList.remove(
+          "bg-primary",
+          "text-dark",
+          "shadow-[0_4px_32px_rgba(127,216,113,0.15)]",
+        );
+        el.classList.add("bg-transparent", "text-primary");
+
+        if (
+          !found &&
+          el.getAttribute("href")?.charAt(0) === "#" &&
+          window.location.hash === el.getAttribute("href")
+        ) {
+          el.classList.remove("bg-transparent", "text-primary");
+          el.classList.add(
+            "bg-primary",
+            "text-dark",
+            "shadow-[0_4px_32px_rgba(127,216,113,0.15)]",
+          );
+          found = true;
+        }
+      });
+      // Default to first if no hash
+      if (!found && navLinks.length > 0) {
+        navLinks[0].classList.remove("bg-transparent", "text-primary");
+        navLinks[0].classList.add(
+          "bg-primary",
+          "text-dark",
+          "shadow-[0_4px_32px_rgba(127,216,113,0.15)]",
+        );
+      }
+    }
+    window.addEventListener("hashchange", updateActive);
+    updateActive();
+  };
+</script>

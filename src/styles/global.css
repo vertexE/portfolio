@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #0e1219;
+  --color-primary: #13eb95;
+  --color-alert: #ff5171;
+  --color-light: #e0e0e0;
+  --color-muted: #8892b0;
+  --color-card-bg: #1a1f29;
+  --color-border-dark: #2a3346;
+  
+  --font-plex: "IBM Plex Mono", monospace;
+
+  --animate-blink: blink 1s step-end infinite;
+
+  @keyframes blink {
+      50% {
+          opacity: 0;
+      }
+  }
+}
+

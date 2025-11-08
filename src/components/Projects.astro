@@ -1,0 +1,176 @@
+---
+import GithubIcon from "../assets/brand-github.svg";
+import SpotifyIcon from "../assets/brand-spotify.svg";
+import ArrowsDiffIcon from "../assets/arrows-diff.svg";
+import TerminalIcon from "../assets/terminal.svg";
+import StackIcon from "../assets/stack.svg";
+import FoldIcon from "../assets/fold.svg";
+import KeyboardIcon from "../assets/keyboard.svg";
+import ColorSwatchIcon from "../assets/color-swatch.svg";
+---
+
+<section id="projects">
+  <div class="container max-w-6xl mx-auto px-8">
+    <h2 class="font-plex text-3xl md:text-4xl text-primary mb-12">
+      // Projects
+    </h2>
+
+    <ul class="max-w-4xl space-y-16">
+      <li class="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-8 items-start">
+        <div
+          class="w-full h-44 bg-card-bg border-2 border-dashed border-muted rounded flex items-center justify-center font-plex text-muted"
+        >
+          <SpotifyIcon class="w-10 h-10 inline" />
+          <ArrowsDiffIcon class="w-8 h-6 inline" />
+          <TerminalIcon class="w-10 h-10 inline" />
+        </div>
+        <div>
+          <div class="flex gap-4">
+            <h3 class="font-plex text-xl text-muted font-light mb-2">
+              fifoplayer
+            </h3>
+            <a
+              href="https://github.com/vertexE/fifoplayer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GithubIcon class="w-6 h-6" />
+            </a>
+          </div>
+          <p class="text-muted mb-4">
+            A Go application that acts as a bridge between the Spotify API and
+            inter-process communication via named pipes (FIFOs) on a local
+            machine. It authenticates with Spotify, periodically fetches the
+            currently playing track details and writes them to a pipe, while
+            listening to another pipe for playback control commands (play,
+            pause, next) to send to Spotify. This allows external programs to
+            read the track info or send playback commands by interacting with
+            the named pipes.
+          </p>
+        </div>
+      </li>
+
+      <li class="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-8 items-start">
+        <div
+          class="w-full h-44 bg-card-bg border-2 border-dashed border-muted rounded flex items-center justify-center font-plex text-muted"
+        >
+          <StackIcon class="w-18 h-18" />
+        </div>
+        <div>
+          <div class="flex gap-4">
+            <h3 class="font-plex text-xl text-muted font-light mb-2">
+              multibuffer.nvim
+            </h3>
+
+            <a
+              href="https://github.com/vertexE/multibuffer.nvim"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GithubIcon class="w-6 h-6" />
+            </a>
+          </div>
+          <p class="text-muted mb-4">
+            An <span class="text-alert">experimental</span> Neovim plugin that improves
+            the process of navigating through buffers by stacking a bunch of floating
+            windows in a single tab. Then, the user can navigate through the buffers
+            by using tab or shift-tab. This allows the user to both search through
+            results with preview windows around the matched lines and edit those
+            matched results without leaving the search tab.
+          </p>
+        </div>
+      </li>
+
+      <li class="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-8 items-start">
+        <div
+          class="w-full h-44 bg-card-bg border-2 border-dashed border-muted rounded flex items-center justify-center font-plex text-muted"
+        >
+          <FoldIcon class="w-18 h-18" />
+        </div>
+        <div>
+          <div class="flex gap-4">
+            <h3 class="font-plex text-xl text-muted font-light mb-2">
+              fold.nvim
+            </h3>
+
+            <a
+              href="https://github.com/vertexE/fold.nvim"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GithubIcon class="w-6 h-6" />
+            </a>
+          </div>
+          <p class="text-muted mb-4">
+            A Neovim plugin designed to help users easily focus on specific code
+            blocks by creating and manipulating manual folds within the editor.
+            It provides commands for folding around diagnostics, buffer text
+            search, selections, marks, and diffs. The plugin aims toward
+            creating a distraction-free coding experience.
+          </p>
+        </div>
+      </li>
+
+      <li class="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-8 items-start">
+        <div
+          class="w-full h-44 bg-card-bg border-2 border-dashed border-muted rounded flex items-center justify-center font-plex text-muted"
+        >
+          <KeyboardIcon class="w-18 h-18" />
+        </div>
+        <div>
+          <div class="flex gap-4">
+            <h3 class="font-plex text-xl text-muted font-light mb-2">
+              type-hero
+            </h3>
+
+            <a
+              href="https://github.com/vertexE/type-hero"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GithubIcon class="w-6 h-6" />
+            </a>
+            <a
+              href="https://vertexe.github.io/type-hero/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary font-light"
+              >demo
+            </a>
+          </div>
+          <p class="text-muted mb-4">
+            a web-based typing game built with React and TypeScript that
+            challenges users to type randomized lines from a list of 1,000
+            words, measuring their words per minute (WPM) and accuracy.
+          </p>
+        </div>
+      </li>
+
+      <li class="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-8 items-start">
+        <div
+          class="w-full h-44 bg-card-bg border-2 border-dashed border-muted rounded flex items-center justify-center font-plex text-muted"
+        >
+          <ColorSwatchIcon class="w-18 h-18" />
+        </div>
+        <div>
+          <div class="flex gap-4">
+            <h3 class="font-plex text-xl text-muted font-light mb-2">
+              synth.nvim
+            </h3>
+
+            <a
+              href="https://github.com/vertexE/synth.nvim"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <GithubIcon class="w-6 h-6" />
+            </a>
+          </div>
+          <p class="text-muted mb-4">
+            A neovim colorscheme, using the same colors as this site.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
